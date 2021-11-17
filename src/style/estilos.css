@@ -1,0 +1,516 @@
+/*ESTILO DEL MENU*/
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap'); */
+
+html{
+	font-size: 82.5%;
+	box-sizing: border-box; 
+}
+
+*::before, *::after{
+	box-sizing: inherit;
+}
+
+/* body{
+	padding: 0;
+	margin: 0;
+	line-height: 1.6;
+	font-family: 'Noto Sans JP', sans-serif;
+	background: url('imagen/fondo.png') no-repeat center center fixed;
+	background-size: cover; 
+} */
+
+.logo{
+  width: 120px;
+  height: 45px;
+}
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 8vh;
+	background-color: #202020;
+}
+
+.ham{
+	display: none;
+	cursor: pointer;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color:transparent; 
+}
+
+	.ham span{
+		display: block;
+		background-color: #f3f3f3;
+		height: 3px;
+		width: 28px;
+		margin: 10px auto;
+		border-radius: 2px; 
+	}
+
+.enlaces-menu{
+	display: flex;
+	padding: 0;
+}
+
+.enlaces-menu li{
+	padding: 0 40px;
+	list-style-type: none; 
+	transition: 0.3s;
+}
+
+.enlaces-menu li a{
+	text-decoration: none;
+	font-size: 1.8rem;
+	color: #f3f3f3;
+	font-weight: 600;
+}
+
+.enlaces-menu li:hover{
+	background-color: rgb(62, 130, 197);
+}
+
+/*DISPOSITIVOS MOVILES*/
+
+@media (max-width: 768px){
+	body{
+		overflow: hidden;
+	}
+
+	.ham{
+		display: block;
+		cursor: pointer;
+		position: absolute;
+		top: 15px;
+		right: 25px;
+		transition: 0.2s 0.1s;
+	}
+
+	nav{
+		flex-direction: column;
+		align-items: flex-start;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	.logo{
+		padding-left: 25px;
+	}
+
+	.enlaces-menu{
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 92vh;
+		margin: 0;
+		padding: 0;
+		display: none;
+		opacity: 0;
+		transition: opacity 5s ease-out;
+		width: 100%;
+	}
+
+	.enlaces-menu li{
+		text-align: center;
+		width: 100%;
+		padding: 20px;
+	}
+}
+
+/*ANIMACIONES*/
+
+/* @keyframes muestraMenu{
+	from{opacity: 0;}
+	to{opacity: 1;}
+	}
+
+	.enlaces-menu-activado{
+		display: flex;
+		animation: muestraMenu 350ms ease-in-out both;
+	}
+
+	.br-1.animado{
+		transform: rotate(-45deg) translate(-10px, 8px);
+	}
+
+	.br-2.animado{
+		opacity: 0;
+	}
+
+	.br-3.animado{
+		transform: rotate(45deg) translate(-10px, -8px);
+	}
+
+	.ham.girar:hover{
+		transform: rotate(360deg);
+	}
+} */
+
+/*ESTILOS FOOTER*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+footer{
+  width: 100%;
+  background: #202020;
+  color: white;
+  position: relative;
+  bottom: 0;
+  clear: both;
+}
+
+.container-footer-all{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.container-body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.colum1{
+  max-width: 400px;
+}
+
+.colum1 h1{
+  font-size: 22px;
+}
+
+.colum1 p{
+  font-size: 14px;
+  color: #C7C7C7;
+  margin-top: 20px;
+}
+
+.colum2{
+  max-width: 400px;
+}
+
+.colum2 h1{
+  font-size: 22px;
+}
+
+.colum2 .row{
+  margin-top: 20px;
+  display: flex;
+}
+
+.row img{
+  width: 36px;
+  height: 36px;
+}
+
+.row label{
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #C7C7C7;
+}
+
+.colum3{
+  max-width: 400px;
+}
+
+.colum3 h1{
+  font-size: 22px;
+}
+
+.row2{
+  margin-top: 20px;
+  display: flex;
+}
+
+.row2 img{
+  width: 36px;
+  height: 36px;
+}
+
+.row2 label{
+  margin-top: 10px;
+  margin-left: 20px;
+  max-width: 150px;
+}
+
+.container-footer{
+  width: 100%;
+  background: #101010;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.copyright{
+  color: #C7C7C7;
+}
+
+.copyright a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1100px){
+  .container-body{
+    flex-wrap: wrap;
+  }
+
+  .colum2, .colum3{
+    margin-top: 40px;
+  }
+}
+
+/*ESTILOS SECTION*/
+.main{
+  width: 1200px;
+}
+
+.main h1{
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  padding-left: 50px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 3rem;
+  column-span: all;
+}
+
+.main2{
+  column-width:100em; 
+  column-gap:5em;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.main .columna1{
+  width: 1000px;
+  margin: 5px;
+  display: inline-block;
+  padding-bottom: 20px; 
+  column-span: all;
+  max-width: 400px;
+}
+
+.main .columna2 img{
+  padding-bottom: 20px;
+  column-span: all;
+  max-width: 400px;
+  max-height: 400px;
+  float: center;
+}
+
+.main .columna3{
+  width: 900px;
+  margin: 5px;
+  display: inline-block;
+  padding-bottom: 20px;
+  column-span: all; 
+  max-width: 400px;
+}
+
+.main2 .columna1 h2{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 5px;
+}
+
+.main2 .columna3 h2{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 5px;
+}
+
+.main2 .columna1 h3{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.main2 .columna3 h3{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/*ESTILOS VENTANA EDUCACIÓN*/
+.eduSeccion{
+  width: 1200px;
+}
+
+.eduSeccion h1{
+  text-align: center;
+  padding-left: 50px;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-size: 3rem;
+  column-span: all;
+  margin: 10px;
+}
+
+.todo{
+  column-width: 100em;
+  column-gap: 5em;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+/*ESTILOS TABLA*/
+.colTabla{
+  width: 600px;
+  display: inline-block;
+  column-span: all;
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+
+.colTabla h2{
+  margin: 5px;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-size: 2rem;
+  text-align: center;
+}
+
+table{
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  background-color: white;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-size: 1.2rem;
+}
+
+/* th, td{
+  border: solid 1px black;
+  padding: 10px;
+} */
+
+/* thead{
+  background-color: #246355;
+  color: white;
+  border-bottom:solid 5px #0F362D; 
+  text-align: center;
+}  */
+
+/* tr:nth-child(even){
+  background-color: #ddd;
+}
+
+tr:hover td{
+  background-color: #369681;
+  color: white;
+} */
+
+/*ESTILOS FORMULARIO*/
+.colFormulario{
+  width: 400px;
+  display: inline-block;
+  column-span: all;
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
+
+.colFormulario h2{
+  margin: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.formulario{
+  width: 600px;
+  text-align: left;
+  border-collapse: collapse;
+  background-color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.2rem;
+}
+
+form{
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+input#boton{
+  padding: 5px 50px;
+  background-color: #246355;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1em;
+  border: 0px;
+  border-radius: 5px;
+}
+
+/*ESTILOS VENTANA EXPERIENCIA*/
+.experiencia{
+  width: 1200px;
+}
+
+.experiencia h1{
+  text-align: center;
+  padding-left: 50px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 3rem;
+  column-span: all;
+  margin: 10px;
+}
+
+.expTodo{
+  column-width: 100em;
+  column-gap: 5em;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.colVideo{
+  width: 600px;
+  display: inline-block;
+  column-span: all;
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+
+.colVideo h2{
+  margin: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.colAudio{
+  width: 400px;
+  display: inline-block;
+  column-span: all;
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
+
+.colAudio h2{
+  margin: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
